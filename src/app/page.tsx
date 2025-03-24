@@ -1,10 +1,9 @@
 import { BeamsBackground } from "@/components/ui/beams-background";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <BeamsBackground>
+    <BeamsBackground intensity="strong">
       <div className="relative z-10 flex min-h-screen flex-col">
         <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-transparent backdrop-blur-sm">
           <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -36,12 +35,7 @@ export default function Home() {
         <main className="flex-1">
           <section className="flex min-h-screen items-center justify-center px-4">
             <div className="text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-4"
-              >
+              <div className="space-y-4">
                 <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white backdrop-blur-sm">
                   📣 Announcement: Introducing Acme.ai
                 </span>
@@ -64,7 +58,7 @@ export default function Home() {
                     7 day free trial. No credit card required.
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
         </main>
