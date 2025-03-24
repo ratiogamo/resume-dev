@@ -1,14 +1,11 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
-// Initialize Inter font
 const inter = Inter({ subsets: ['latin'] })
 
-// Metadata for better SEO
 export const metadata = {
-  title: 'Resume Builder',
-  description: 'Create beautiful, professional resumes with our modern builder',
-  keywords: 'resume, cv, builder, professional, job application',
+  title: 'Acme.ai - Automate your workflow with AI',
+  description: 'No matter what problem you have, our AI can help you solve it.',
 }
 
 export default function RootLayout({
@@ -17,11 +14,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <main className="min-h-screen bg-gray-50">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   )
