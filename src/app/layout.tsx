@@ -1,9 +1,14 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
-export const metadata: Metadata = {
+// Initialize Inter font
+const inter = Inter({ subsets: ['latin'] })
+
+// Metadata for better SEO
+export const metadata = {
   title: 'Resume Builder',
-  description: 'Create professional resumes easily',
+  description: 'Create beautiful, professional resumes with our modern builder',
+  keywords: 'resume, cv, builder, professional, job application',
 }
 
 export default function RootLayout({
@@ -13,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>
+        <main className="min-h-screen bg-gray-50">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
